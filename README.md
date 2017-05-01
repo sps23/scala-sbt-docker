@@ -14,6 +14,12 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 
 ```
 image: atlassian/scala-sbt
+
+pipelines:
+  default:
+    - step:
+        script:
+          - sbt test
 ```
 
 ## Contribution policy ##
