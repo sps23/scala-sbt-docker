@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 ## Usage in Pipelines ##
 
 ```
-image: atlassian/scala-sbt
+image: bitbucketpipelines/scala-sbt:scala-2.12
 
 pipelines:
   default:
@@ -21,6 +21,9 @@ pipelines:
         script:
           - sbt test
 ```
+
+## Extending or using different Scala or SBT versions
+Feel free to fork this repo and change the `SCALA_VERSION` in `SBT_VERSION` values in the Dockerfile.
 
 ## Contribution policy ##
 
