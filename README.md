@@ -7,13 +7,13 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 
 ## Base Docker Image ##
 
-* [openjdk:8](https://hub.docker.com/_/openjdk)
+* [openjdk](https://hub.docker.com/_/openjdk)
 
 
 ## Usage in Pipelines ##
 
 ```
-image: bitbucketpipelines/scala-sbt:scala-2.13
+image: sps23/scala-sbt-build:8u265-jdk-buster_2.13.5_1.5.0
 
 pipelines:
   default:

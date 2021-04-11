@@ -4,9 +4,10 @@
 # https://github.com/hseeberger/scala-sbt
 #
 
-# Pull base image
-ARG BASE_IMAGE_TAG
-FROM openjdk:${BASE_IMAGE_TAG:-8u265-jdk-buster}
+# Pull openjdk image
+ARG OPENJDK_IMAGE_TAG
+ENV OPENJDK_IMAGE_TAG ${OPENJDK_IMAGE_TAG:-8u265-jdk-buster}
+FROM openjdk:$OPENJDK_IMAGE_TAG
 
 # Env variables
 ARG SCALA_VERSION

@@ -5,7 +5,7 @@ pipelines:
   default:
     - step:
         script:
-          - export IMAGE_NAME=bitbucketpipelines/scala-sbt-build
+          - export IMAGE_NAME=sps23/scala-sbt-build
           - docker build -t $IMAGE_NAME .
           - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
           - docker push $IMAGE_NAME
@@ -13,7 +13,7 @@ pipelines:
     '*':
       - step:
           script:
-             - export IMAGE_NAME=bitbucketpipelines/scala-sbt-build
-             - docker build -t $IMAGE_NAME:$BITBUCKET_TAG .
+             - export IMAGE_NAME=sps23/scala-sbt-build
+             - docker build -t $IMAGE_NAME:8u265-jdk-buster_2.13.5_1.5.0 .
              - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
              - docker push $IMAGE_NAME
