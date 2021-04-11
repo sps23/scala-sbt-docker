@@ -7,9 +7,6 @@ pipelines:
         script:
           - export IMAGE_NAME=sps23/scala-sbt-build
           - export TAG_NAME="${OPENJDK_IMAGE_TAG}_${SCALA_VERSION}_${SBT_VERSION}"
-          - docker build . -t $IMAGE_NAME:$TAG_NAME \
-              --build-arg OPENJDK_IMAGE_TAG=$OPENJDK_IMAGE_TAG \
-              --build-arg SCALA_VERSION=$SCALA_VERSION \
-              --build-arg SBT_VERSION=$SBT_VERSION
+          - docker build -t $IMAGE_NAME:$TAG_NAME --build-arg OPENJDK_IMAGE_TAG=$OPENJDK_IMAGE_TAG --build-arg SCALA_VERSION=$SCALA_VERSION --build-arg SBT_VERSION=$SBT_VERSION .
           - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
           - docker push $IMAGE_NAME:$TAG_NAME
