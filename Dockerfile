@@ -5,8 +5,7 @@
 #
 
 # Pull openjdk image
-ENV OPENJDK_IMAGE_TAG ${OPENJDK_IMAGE_TAG}
-FROM openjdk:$OPENJDK_IMAGE_TAG
+FROM openjdk:${OPENJDK_IMAGE_TAG}
 
 # Env variables
 #ARG SCALA_VERSION
