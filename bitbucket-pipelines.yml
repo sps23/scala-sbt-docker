@@ -9,10 +9,11 @@ pipelines:
           - docker build -t $IMAGE_NAME .
           - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
           - docker push $IMAGE_NAME
-#  j11:
-#      - step:
-#          script:
-#             - export IMAGE_NAME=sps23/scala-sbt-build:11.0.10-jdk-buster_2.13.5_1.5.0
-#             - docker build -t $IMAGE_NAME .
-#             - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
-#             - docker push $IMAGE_NAME
+  jdk11:
+      - step:
+          script:
+             - export IMAGE_NAME=sps23/scala-sbt-build:11.0.10-jdk-buster_2.13.5_1.5.0
+             - docker build -t $IMAGE_NAME \
+               --build-arg BASE_IMAGE_TAG=11.0.10-jdk-buster .
+             - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+             - docker push $IMAGE_NAME
