@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 ## Usage in Pipelines ##
 
 ```
-image: bitbucketpipelines/scala-sbt:scala-2.12
+image: bitbucketpipelines/scala-sbt:scala-2.13
 
 pipelines:
   default:
