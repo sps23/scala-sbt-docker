@@ -13,7 +13,7 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 ## Usage in Pipelines ##
 
 ```
-image: sps23/scala-sbt-build:8u265-jdk-buster_2.13.5_1.5.0
+image: sps23/scala-sbt-build:8u282-jdk-buster_2.13.5_1.5.0
 
 pipelines:
   default:
