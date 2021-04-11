@@ -6,7 +6,7 @@
 
 # Pull openjdk image
 ARG OPENJDK_IMAGE_TAG
-FROM openjdk:${OPENJDK_IMAGE_TAG:-8u265-jdk-buster}
+FROM openjdk:${OPENJDK_IMAGE_TAG:-8u282-jdk-buster}
 
 # Env variables
 ARG SCALA_VERSION
