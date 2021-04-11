@@ -11,7 +11,7 @@ ENV SCALA_VERSION 2.13.5
 ENV SBT_VERSION 0.13.15
 
 # Scala expects this file
-RUN touch /usr/lib/jvm/java-8-openjdk-amd64/release
+# RUN touch /usr/lib/jvm/java-8-openjdk-amd64/release
 
 # Install Scala
 ## Piping curl directly in tar
