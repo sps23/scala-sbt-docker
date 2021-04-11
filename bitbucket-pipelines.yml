@@ -6,7 +6,7 @@ pipelines:
     - step:
         script:
           - export IMAGE_NAME=bitbucketpipelines/scala2_13-sbt
-          - docker build -t $IMAGE_NAME:latest .
+          - docker build -t $IMAGE_NAME .
           - docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
           - docker push $IMAGE_NAME
   tags:
