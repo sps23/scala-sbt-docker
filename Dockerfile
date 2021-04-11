@@ -5,7 +5,7 @@
 #
 
 # Pull base image
-FROM  openjdk:8
+FROM  openjdk:8u282-jdk-buster
 
 ENV SCALA_VERSION 2.13.5
 ENV SBT_VERSION 0.13.15
