@@ -5,10 +5,13 @@ Forked from [hseeberger/scala-sbt](https://github.com/hseeberger/scala-sbt)
 This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) and [sbt](http://www.scala-sbt.org).
 
 
-## Base Docker Image ##
+## Base Docker Image
 
 * [openjdk](https://hub.docker.com/_/openjdk)
 
+## Docker Image 
+
+* [sps23/scala-sbt-build](https://hub.docker.com/repository/docker/sps23/scala-sbt-build)
 
 ## Usage in Pipelines ##
 
@@ -22,12 +25,16 @@ pipelines:
           - sbt test
 ```
 
-## Extending or using different Scala or SBT versions
-Feel free to fork this repo and change the `SCALA_VERSION` in `SBT_VERSION` values in the Dockerfile.
+## Using different JDK, Scala or SBT versions
+Pass in repository variables:
+* OPENJDK_IMAGE_TAG - example: 8u282-jdk-buster
+* SCALA_VERSION - example: 2.13.5
+* SBT_VERSION - 1.5.0
+
 
 ## Contribution policy ##
 
-Contributions via Bitbucket pull requests are gladly accepted from their original author. Along with any pull requests, please state that the contribution is your original work and that you license the work to the project under the project's open source license. Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
+Feel free to contribute via Bitbucket pull requests. Please state the contribution is your original work and that you license the work to the project under the project's open source license. Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
 
 
 ## License ##
