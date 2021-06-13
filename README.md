@@ -25,11 +25,20 @@ pipelines:
           - sbt test
 ```
 
+## Docker credentials
+
+Pass in repository variables (Repository Settings -> Repository variables):
+
+* DOCKER_USERNAME
+* DOCKER_PASSWORD
+
 ## Using different JDK, Scala or SBT versions
-Pass in repository variables:
-* OPENJDK_IMAGE_TAG - example: 8u282-jdk-buster
-* SCALA_VERSION - example: 2.13.5
-* SBT_VERSION - 1.5.0
+
+Pass in repository variables (Repository Settings -> Repository variables):
+
+* OPENJDK_IMAGE_TAG - example: 8u292-jdk-buster
+* SCALA_VERSION - example: 2.13.6
+* SBT_VERSION - 1.5.3
 
 
 ## Contribution policy ##
